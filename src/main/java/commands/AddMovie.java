@@ -26,12 +26,12 @@ public class AddMovie implements Command {
 
     @Override
     public void process() throws IOException {
-        Movie movie = inputService.getInformation();
-
         List<Movie> movies = movieRepository.findAll();
         Movie.idCounter = movies.size();
 
-        if(Check.movieName(movies, movie)) {
+        Movie movie = inputService.getInformation();
+
+        if(Check.movieNameDefined(movies, movie)) {
             movies.add(movie);
             movieRepository.saveAll(movies);
         } else {

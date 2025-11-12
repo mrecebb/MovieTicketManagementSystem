@@ -1,8 +1,11 @@
 import commands.AddMovie;
 import commands.ListMovies;
+import commands.PurchaseTicket;
 import interfaces.Command;
 import interfaces.MovieRepository;
+import interfaces.TicketRepository;
 import movie.MovieInputService;
+import tickets.TicketInputService;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,12 +16,13 @@ public class UserInterface {
     Scanner scanner;
 
     // object-leri CONSTRUCTOR INJECTION ile al (SOLID - O)
-    UserInterface(List<Command> commands, MovieInputService mis, MovieRepository repo, Scanner scanner) throws IOException {
+    UserInterface(List<Command> commands, MovieInputService mis, TicketInputService tis, MovieRepository repo, TicketRepository tr, Scanner scanner) throws IOException {
         this.commands = commands;
         this.scanner = scanner;
 
         commands.add(new AddMovie(mis, repo));
         commands.add(new ListMovies(repo));
+        commands.add(new PurchaseTicket(tr, tis, scanner));
     }
 
     public void start() throws IOException {

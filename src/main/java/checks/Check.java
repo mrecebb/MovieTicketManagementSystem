@@ -9,7 +9,7 @@ public class Check {
         return rating <= 5 && rating >= 1;
     }
 
-    public static boolean movieName(List<Movie> movies, Movie movie) {
+    public static boolean movieNameDefined(List<Movie> movies, Movie movie) {
         for (Movie m : movies) {
             if (m.getTitle().equalsIgnoreCase(movie.getTitle())) {
                 return false;
@@ -18,4 +18,23 @@ public class Check {
         return true;
     }
 
+    public static boolean MovieExistsById(List<Movie> movies, long movieId) {
+        for (Movie m : movies) {
+            if (m.getId() == movieId) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean seatAvailable(List<Movie> movies, long movieId, int seat) {
+        for (Movie m : movies) {
+            if (m.getId() == movieId) {
+                if (seat < 1 || seat > m.getAvailableSeats()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }

@@ -1,0 +1,15 @@
+[ {
+  "id" : 1,
+  "customerId" : 3,
+  "movieId" : 3,
+  "seatNumber" : 95,
+  "price" : 10.0,
+  "purchaseTime" : "2025-11-12 14:40:33"
+}, {
+  "id" : 2,
+  "customerId" : 7,
+  "movieId" : 3,
+  "seatNumber" : 45,
+  "price" : 10.0,
+  "purchaseTime" : "2025-11-12 14:43:00"
+} ]

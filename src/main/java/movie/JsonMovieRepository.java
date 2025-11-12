@@ -2,6 +2,7 @@ package movie;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import interfaces.MovieRepository;
+import tickets.Ticket;
 
 import java.io.File;
 import java.io.IOException;

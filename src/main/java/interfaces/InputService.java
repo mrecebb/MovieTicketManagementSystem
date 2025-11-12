@@ -1,5 +1,7 @@
 package interfaces;
 
+import java.io.IOException;
+
 public interface InputService {
-    Object getInformation();
+    Object getInformation() throws IOException;
 }
