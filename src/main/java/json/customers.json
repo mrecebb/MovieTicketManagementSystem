@@ -1,0 +1,13 @@
+[ {
+  "id" : 1,
+  "name" : "Receb",
+  "email" : "mreceb0111@gmail.com",
+  "phone" : "+994506762447",
+  "channel" : "EMAIL"
+}, {
+  "id" : 2,
+  "name" : "Tural",
+  "email" : "turalhuseynli@gmail.com",
+  "phone" : "+994103333434",
+  "channel" : "SMS"
+} ]

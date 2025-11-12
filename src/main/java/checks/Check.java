@@ -1,5 +1,6 @@
 package checks;
 
+import customers.Customer;
 import movie.Movie;
 
 import java.util.List;
@@ -21,6 +22,15 @@ public class Check {
     public static boolean MovieExistsById(List<Movie> movies, long movieId) {
         for (Movie m : movies) {
             if (m.getId() == movieId) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean CustomerExistsById(List<Customer> customers, long customerId) {
+        for (Customer c : customers) {
+            if (c.getId() == customerId) {
                 return true;
             }
         }

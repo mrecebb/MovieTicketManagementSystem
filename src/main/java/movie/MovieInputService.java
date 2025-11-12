@@ -2,6 +2,7 @@ package movie;
 
 import checks.Check;
 import enums.Genre;
+import exceptions.InvalidChoice;
 import interfaces.InputService;
 
 import java.util.List;
@@ -34,6 +35,9 @@ public class MovieInputService implements InputService {
         }
         System.out.print("Enter Genre (1-" + genres.size() + "): ");
         int choice = Integer.parseInt(in.nextLine());
+        if (choice < 1 || choice > genres.size()) {
+            throw new InvalidChoice("Invalid choice");
+        }
         Genre genre = genres.get(choice - 1);
 
         System.out.print("Duration Minutes: ");

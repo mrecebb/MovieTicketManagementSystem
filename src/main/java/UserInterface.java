@@ -1,7 +1,10 @@
+import commands.AddCustomer;
 import commands.AddMovie;
 import commands.ListMovies;
 import commands.PurchaseTicket;
+import customers.CustomerInputService;
 import interfaces.Command;
+import interfaces.CustomerRepository;
 import interfaces.MovieRepository;
 import interfaces.TicketRepository;
 import movie.MovieInputService;
@@ -16,12 +19,22 @@ public class UserInterface {
     Scanner scanner;
 
     // object-leri CONSTRUCTOR INJECTION ile al (SOLID - O)
-    UserInterface(List<Command> commands, MovieInputService mis, TicketInputService tis, MovieRepository repo, TicketRepository tr, Scanner scanner) throws IOException {
+    UserInterface(
+            List<Command> commands,
+            MovieInputService mis,
+            TicketInputService tis,
+            CustomerInputService cus,
+            MovieRepository repo,
+            TicketRepository tr,
+            CustomerRepository cr,
+            Scanner scanner
+    ) throws IOException {
         this.commands = commands;
         this.scanner = scanner;
 
         commands.add(new AddMovie(mis, repo));
         commands.add(new ListMovies(repo));
+        commands.add(new AddCustomer(cr, cus));
         commands.add(new PurchaseTicket(tr, tis, scanner));
     }
 

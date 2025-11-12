@@ -1,8 +1,10 @@
 package tickets;
 
 import checks.Check;
+import customers.Customer;
 import exceptions.NoSeatsAvailableException;
 import exceptions.NotFoundException;
+import interfaces.CustomerRepository;
 import interfaces.InputService;
 import interfaces.MovieRepository;
 import movie.Movie;
@@ -16,10 +18,12 @@ import java.util.Scanner;
 
 public class TicketInputService implements InputService {
     private final MovieRepository movieRepository;
+    private final CustomerRepository customerRepository;
     private final Scanner scanner;
 
-    public TicketInputService(MovieRepository mr, Scanner sc) {
+    public TicketInputService(MovieRepository mr, CustomerRepository cr, Scanner sc) {
         this.movieRepository = mr;
+        this.customerRepository = cr;
         this.scanner = sc;
     }
 
@@ -27,13 +31,17 @@ public class TicketInputService implements InputService {
     public Ticket getInformation() throws IOException {
         System.out.println("Avilable Movies:");
         List<Movie> movies = movieRepository.findAll();
+        List<Customer> customers = customerRepository.findAll();
         for (Movie movie : movies) {
             System.out.println(movie);
         }
 
         System.out.print("Enter Customer ID: ");
         long customerId = Integer.parseInt(scanner.nextLine());
-        //! add customer check
+        if (!Check.CustomerExistsById(customers, customerId)) {
+            throw new NotFoundException("Customer with ID " + customerId + " not found");
+        }
+
 
         System.out.print("Enter Movie ID: ");
         long movieId = Integer.parseInt(scanner.nextLine());
