@@ -21,7 +21,7 @@
   "seatNumber" : 45,
   "price" : 25.0,
   "purchaseTime" : "2025-11-12 16:12:30",
-  "status" : "PURCHASED"
+  "status" : "CANCELLED"
 }, {
   "id" : 4,
   "customerId" : 4,
@@ -30,4 +30,28 @@
   "price" : 8.5,
   "purchaseTime" : "2025-11-12 16:37:38",
   "status" : "PURCHASED"
+}, {
+  "id" : 5,
+  "customerId" : 1,
+  "movieId" : 1,
+  "seatNumber" : 1,
+  "price" : 25.0,
+  "purchaseTime" : "2025-11-12 17:14:36",
+  "status" : "CANCELLED"
+}, {
+  "id" : 6,
+  "customerId" : 3,
+  "movieId" : 5,
+  "seatNumber" : 65,
+  "price" : 7.5,
+  "purchaseTime" : "2025-11-12 17:40:26",
+  "status" : "PURCHASED"
+}, {
+  "id" : 7,
+  "customerId" : 5,
+  "movieId" : 7,
+  "seatNumber" : 23,
+  "price" : 8.0,
+  "purchaseTime" : "2025-11-12 17:58:21",
+  "status" : "CANCELLED"
 } ]

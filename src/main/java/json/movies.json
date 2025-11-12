@@ -4,7 +4,7 @@
   "genre" : "ACTION",
   "durationMinutes" : 2300,
   "rating" : 5.0,
-  "availableSeats" : 198,
+  "availableSeats" : 194,
   "price" : 25.0
 }, {
   "id" : 2,
@@ -36,7 +36,7 @@
   "genre" : "HORROR",
   "durationMinutes" : 112,
   "rating" : 3.7,
-  "availableSeats" : 70,
+  "availableSeats" : 69,
   "price" : 7.5
 }, {
   "id" : 6,
@@ -46,4 +46,12 @@
   "rating" : 4.3,
   "availableSeats" : 150,
   "price" : 5.5
+}, {
+  "id" : 7,
+  "title" : "The Game",
+  "genre" : "DRAMA",
+  "durationMinutes" : 129,
+  "rating" : 3.8,
+  "availableSeats" : 29,
+  "price" : 8.0
 } ]

@@ -1,10 +1,8 @@
 import commands.*;
 import customers.CustomerInputService;
-import interfaces.Command;
-import interfaces.CustomerRepository;
-import interfaces.MovieRepository;
-import interfaces.TicketRepository;
+import interfaces.*;
 import movie.MovieInputService;
+import notifications.SendNotification;
 import tickets.TicketInputService;
 
 import java.io.IOException;
@@ -24,7 +22,8 @@ public class UserInterface {
             MovieRepository repo,
             TicketRepository tr,
             CustomerRepository cr,
-            Scanner scanner
+            Scanner scanner,
+            SendNotification sn
     ) {
         this.commands = commands;
         this.scanner = scanner;
@@ -32,7 +31,9 @@ public class UserInterface {
         commands.add(new AddMovie(mis, repo));
         commands.add(new ListMovies(repo));
         commands.add(new AddCustomer(cr, cus));
-        commands.add(new PurchaseTicket(tr, tis, scanner));
+        commands.add(new PurchaseTicket(tr, tis, cr, scanner, sn));
+        commands.add(new CancelTicket(tr, cr, scanner, sn));
+        commands.add(new ListAllTickets(tr));
         commands.add(new ShowUserTickets(cr, tr, scanner));
     }
 

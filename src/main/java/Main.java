@@ -6,6 +6,7 @@ import enums.NotificationChannel;
 import interfaces.Command;
 import movie.JsonMovieRepository;
 import movie.MovieInputService;
+import notifications.SendNotification;
 import tickets.JsonTicketRepository;
 import tickets.TicketInputService;
 
@@ -39,6 +40,8 @@ public class Main {
         TicketInputService ticketInputService = new TicketInputService(jsonMovieRepository, jsonCustomerRepository, scanner); // purchase ticket ucun giris
         CustomerInputService customerInputService = new CustomerInputService(jsonCustomerRepository, notificationChannels, scanner);
 
+        SendNotification sendNotification = new SendNotification();
+
         UserInterface ui = new UserInterface(
                 commands,
                 movieInputService,
@@ -47,7 +50,9 @@ public class Main {
                 jsonMovieRepository,
                 jsonTicketRepository,
                 jsonCustomerRepository,
-                scanner);
+                scanner,
+                sendNotification
+        );
         ui.start();
     }
 }

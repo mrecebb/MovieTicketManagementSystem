@@ -30,10 +30,12 @@ public class Ticket {
     public String toString() {
         return "Ticket{" +
                 "id=" + id +
+                ", customerId=" + customerId +
                 ", movieId=" + movieId +
                 ", seatNumber=" + seatNumber +
                 ", price=" + price +
                 ", purchaseTime='" + purchaseTime + '\'' +
+                ", status=" + status +
                 '}';
     }
 

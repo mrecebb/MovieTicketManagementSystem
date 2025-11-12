@@ -22,4 +22,10 @@
   "email" : "yusifx@gmail.com",
   "phone" : "+994556548976",
   "channel" : "EMAIL"
+}, {
+  "id" : 5,
+  "name" : "Rauf",
+  "email" : "raufadnsu@gmail.com",
+  "phone" : "+994506762447",
+  "channel" : "SMS"
 } ]

@@ -10,7 +10,7 @@ public class Movie {
     private Genre genre;
     private int durationMinutes;
     private Double rating;
-    private int availableSeats;
+    private Integer availableSeats;
     private Double price;
 
     @JsonCreator
@@ -95,7 +95,7 @@ public class Movie {
     }
 
     @SuppressWarnings("unused")
-    public int getAvailableSeats() {
+    public Integer getAvailableSeats() {
         return availableSeats;
     }
 

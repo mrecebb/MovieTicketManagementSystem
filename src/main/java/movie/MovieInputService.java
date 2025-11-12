@@ -57,7 +57,7 @@ public class MovieInputService implements InputService {
         }
 
         System.out.print("Available Seats: ");
-        int seats = Integer.parseInt(in.nextLine());
+        Integer seats = Integer.parseInt(in.nextLine());
 
         System.out.print("Price: ");
         double price = Double.parseDouble(in.nextLine());
