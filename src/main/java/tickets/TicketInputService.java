@@ -12,7 +12,6 @@ import movie.Movie;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,7 +37,7 @@ public class TicketInputService implements InputService {
 
         System.out.print("Enter Customer ID: ");
         long customerId = Integer.parseInt(scanner.nextLine());
-        if (!Check.CustomerExistsById(customers, customerId)) {
+        if (Check.CustomerExistsWithId(customers, customerId)) {
             throw new NotFoundException("Customer with ID " + customerId + " not found");
         }
 
@@ -52,7 +51,7 @@ public class TicketInputService implements InputService {
         System.out.print("Enter Seat Number: ");
         int seatNumber = Integer.parseInt(scanner.nextLine());
         for (Movie movie : movies) {
-            if (movie.getId() == movieId || movie.getAvailableSeats() == 0) {
+            if (movie.getId() == movieId && movie.getAvailableSeats() == 0) {
                 throw new NoSeatsAvailableException("No seats available");
             }
         }

@@ -6,7 +6,6 @@ import tickets.Ticket;
 import tickets.TicketInputService;
 
 import java.io.IOException;
-import java.io.PushbackInputStream;
 import java.util.List;
 import java.util.Scanner;
 

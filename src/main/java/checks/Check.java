@@ -28,13 +28,13 @@ public class Check {
         return false;
     }
 
-    public static boolean CustomerExistsById(List<Customer> customers, long customerId) {
+    public static boolean CustomerExistsWithId(List<Customer> customers, long customerId) {
         for (Customer c : customers) {
             if (c.getId() == customerId) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static boolean seatAvailable(List<Movie> movies, long movieId, int seat) {

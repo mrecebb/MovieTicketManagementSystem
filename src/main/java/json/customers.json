@@ -10,4 +10,16 @@
   "email" : "turalhuseynli@gmail.com",
   "phone" : "+994103333434",
   "channel" : "SMS"
+}, {
+  "id" : 3,
+  "name" : "Fuad",
+  "email" : "sevkhanli@gmail.com",
+  "phone" : "+994773961414",
+  "channel" : "SMS"
+}, {
+  "id" : 4,
+  "name" : "Yusif",
+  "email" : "yusifx@gmail.com",
+  "phone" : "+994556548976",
+  "channel" : "EMAIL"
 } ]

@@ -5,7 +5,6 @@ import exceptions.InvalidChoice;
 import interfaces.CustomerRepository;
 import interfaces.InputService;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,7 +23,7 @@ public class CustomerInputService implements InputService {
     }
 
     @Override
-    public Customer getInformation() throws IOException {
+    public Customer getInformation() {
         System.out.print("Name: ");
         String name = scanner.nextLine();
 

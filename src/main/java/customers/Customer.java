@@ -1,5 +1,6 @@
 package customers;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import enums.NotificationChannel;
 
 public class Customer {
@@ -10,6 +11,7 @@ public class Customer {
     private String phone;
     private NotificationChannel channel;
 
+    @JsonCreator
     public Customer() {}
 
     public Customer(String name, String email, String phone, NotificationChannel channel) {
@@ -20,42 +22,51 @@ public class Customer {
         this.channel = channel;
     }
 
+    @SuppressWarnings("unused")
     public long getId() {
         return id;
     }
-
+    @SuppressWarnings("unused")
     public void setId(long id) {
         this.id = id;
     }
 
+    @SuppressWarnings("unused")
     public String getName() {
         return name;
     }
 
+    @SuppressWarnings("unused")
     public void setName(String name) {
         this.name = name;
     }
 
+    @SuppressWarnings("unused")
     public String getEmail() {
         return email;
     }
 
+    @SuppressWarnings("unused")
     public void setEmail(String email) {
         this.email = email;
     }
 
+    @SuppressWarnings("unused")
     public String getPhone() {
         return phone;
     }
 
+    @SuppressWarnings("unused")
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
+    @SuppressWarnings("unused")
     public NotificationChannel getChannel() {
         return channel;
     }
 
+    @SuppressWarnings("unused")
     public void setChannel(NotificationChannel channel) {
         this.channel = channel;
     }

@@ -1,9 +1,7 @@
 package tickets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import interfaces.MovieRepository;
 import interfaces.TicketRepository;
-import movie.Movie;
 
 import java.io.File;
 import java.io.IOException;
