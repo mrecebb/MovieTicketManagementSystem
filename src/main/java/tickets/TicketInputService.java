@@ -2,6 +2,7 @@ package tickets;
 
 import checks.Check;
 import customers.Customer;
+import enums.TicketStatus;
 import exceptions.NoSeatsAvailableException;
 import exceptions.NotFoundException;
 import interfaces.CustomerRepository;
@@ -76,8 +77,10 @@ public class TicketInputService implements InputService {
 
         String date = now.format(dtf);
 
+        TicketStatus status = TicketStatus.PURCHASED;
+
         movieRepository.saveAll(movies);
 
-        return new Ticket(customerId, movieId, seatNumber, price, date);
+        return new Ticket(customerId, movieId, seatNumber, price, date, status);
     }
 }

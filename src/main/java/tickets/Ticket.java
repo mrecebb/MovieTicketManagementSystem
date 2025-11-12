@@ -1,6 +1,7 @@
 package tickets;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import enums.TicketStatus;
 
 public class Ticket {
     private long id;
@@ -10,17 +11,19 @@ public class Ticket {
     private int seatNumber;
     private double price;
     private String purchaseTime;
+    private TicketStatus status;
 
     @JsonCreator
     public Ticket() {}
 
-    public Ticket(long customerId, long movieId, int seatNumber, double price, String purchaseTime) {
+    public Ticket(long customerId, long movieId, int seatNumber, double price, String purchaseTime, TicketStatus status) {
         this.id = ++idCounter;
         this.customerId = customerId;
         this.movieId = movieId;
         this.seatNumber = seatNumber;
         this.price = price;
         this.purchaseTime = purchaseTime;
+        this.status = status;
     }
 
     @Override
@@ -92,5 +95,15 @@ public class Ticket {
     @SuppressWarnings("unused")
     public void setPurchaseTime(String purchaseTime) {
         this.purchaseTime = purchaseTime;
+    }
+
+    @SuppressWarnings("unused")
+    public TicketStatus getStatus() {
+        return status;
+    }
+
+    @SuppressWarnings("unused")
+    public void setStatus(TicketStatus status) {
+        this.status = status;
     }
 }

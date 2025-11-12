@@ -4,19 +4,30 @@
   "movieId" : 3,
   "seatNumber" : 95,
   "price" : 10.0,
-  "purchaseTime" : "2025-11-12 14:40:33"
+  "purchaseTime" : "2025-11-12 14:40:33",
+  "status" : "PURCHASED"
 }, {
   "id" : 2,
   "customerId" : 1,
   "movieId" : 3,
   "seatNumber" : 45,
   "price" : 10.0,
-  "purchaseTime" : "2025-11-12 14:43:00"
+  "purchaseTime" : "2025-11-12 14:43:00",
+  "status" : "PURCHASED"
 }, {
   "id" : 3,
   "customerId" : 1,
   "movieId" : 1,
   "seatNumber" : 45,
   "price" : 25.0,
-  "purchaseTime" : "2025-11-12 16:12:30"
+  "purchaseTime" : "2025-11-12 16:12:30",
+  "status" : "PURCHASED"
+}, {
+  "id" : 4,
+  "customerId" : 4,
+  "movieId" : 2,
+  "seatNumber" : 65,
+  "price" : 8.5,
+  "purchaseTime" : "2025-11-12 16:37:38",
+  "status" : "PURCHASED"
 } ]
