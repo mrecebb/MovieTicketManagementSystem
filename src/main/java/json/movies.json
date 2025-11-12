@@ -1,0 +1,49 @@
+[ {
+  "id" : 1,
+  "title" : "La Casa De Papel",
+  "genre" : "ACTION",
+  "durationMinutes" : 2300,
+  "rating" : 5.0,
+  "availableSeats" : 200,
+  "price" : 25.0
+}, {
+  "id" : 2,
+  "title" : "Interstellar",
+  "genre" : "DRAMA",
+  "durationMinutes" : 169,
+  "rating" : 4.5,
+  "availableSeats" : 120,
+  "price" : 8.5
+}, {
+  "id" : 3,
+  "title" : "The Dark Knight",
+  "genre" : "ACTION",
+  "durationMinutes" : 152,
+  "rating" : null,
+  "availableSeats" : 95,
+  "price" : 10.0
+}, {
+  "id" : 4,
+  "title" : "The Mask",
+  "genre" : "COMEDY",
+  "durationMinutes" : 101,
+  "rating" : 3.3,
+  "availableSeats" : 45,
+  "price" : 6.0
+}, {
+  "id" : 5,
+  "title" : "The Conjuring",
+  "genre" : "HORROR",
+  "durationMinutes" : 112,
+  "rating" : 3.7,
+  "availableSeats" : 70,
+  "price" : 7.5
+}, {
+  "id" : 6,
+  "title" : "The Lion King",
+  "genre" : "ANIMATION",
+  "durationMinutes" : 88,
+  "rating" : 4.3,
+  "availableSeats" : 150,
+  "price" : 5.5
+} ]
