@@ -1,14 +1,15 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
-import customers.CustomerInputService;
-import customers.JsonCustomerRepository;
+import service.CustomerInputService;
+import repository.JsonCustomerRepository;
 import enums.Genre;
 import enums.NotificationChannel;
-import interfaces.Command;
-import movie.JsonMovieRepository;
-import movie.MovieInputService;
-import notifications.SendNotification;
-import tickets.JsonTicketRepository;
-import tickets.TicketInputService;
+import ui.commands.Command;
+import repository.JsonMovieRepository;
+import service.MovieInputService;
+import service.notifications.SendNotification;
+import repository.JsonTicketRepository;
+import service.TicketInputService;
+import ui.ConsoleUserInterface;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import static enums.Constant.*;
+import static config.Constants.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -42,7 +43,7 @@ public class Main {
 
         SendNotification sendNotification = new SendNotification();
 
-        UserInterface ui = new UserInterface(
+        ConsoleUserInterface ui = new ConsoleUserInterface(
                 commands,
                 movieInputService,
                 ticketInputService,
